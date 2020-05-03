@@ -169,9 +169,9 @@ left:0;
 
 h2 {
     position: relative;
-    top: 3%;
     text-align: center;
-    font-size: 35px;
+    top: 4%;
+    font-size: 30px;
     opacity: 0;
     font-style: italic;
     transition: 3s;
@@ -191,6 +191,7 @@ h2 {
     font-size: 40px;
     color:gray;
     position: relative;
+    font-style: italic;
     transform: translateY(50px);
     transition: all 3s ease-out;
     opacity:0;
