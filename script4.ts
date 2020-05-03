@@ -1,20 +1,19 @@
-var canvas = document.querySelector('canvas');
-canvas.width = innerWidth;
-canvas.height = 400;
-canvas.style.cursor ="none";
+var canvas4 = document.getElementById('flyingBalls');
+var c = canvas4.getContext('2d');
+canvas4.width = innerWidth;
+canvas4.height = 400;
+canvas4.style.cursor ="none";
 
-
-var c = canvas.getContext('2d');
-const offsetLeft = document.querySelector('canvas').getBoundingClientRect().left;
-const offsetTop = document.querySelector('canvas').getBoundingClientRect().top;
+const offsetLeft = document.getElementById('flyingBalls').getBoundingClientRect().left;
+const offsetTop = document.getElementById('flyingBalls').getBoundingClientRect().top;
 
 
 let mouse = {
     x: undefined,
     y: undefined
 }
-var maxRadius = 40;
-let ballCount = 1000;
+var maxRadius1 = 40;
+let ballCount1 = 1000;
 var colorArray = [
     '#829FD9',
     '#027368',
@@ -27,14 +26,14 @@ window.addEventListener('mousemove', function(event) {
     mouse.y = event.y - offsetTop;
 })
 window.addEventListener('resize', function() {
-    canvas.width = window.innerWidth;
+    canvas4.width = window.innerWidth;
     // canvas.height = window.innerHeight;
 
-    init();
+    init1();
 })
 
 
-function Circle(x, y, dx, dy, radius) {
+function Circle1(x, y, dx, dy, radius) {
     this.x = x;
     this.y = y;
     this.dx = dx;
@@ -51,13 +50,13 @@ function Circle(x, y, dx, dy, radius) {
 
     }
     this.update = function() {
-        if (this.x + this.radius > canvas.width || this.x - this.radius < 0)
+        if (this.x + this.radius > canvas4.width || this.x - this.radius < 0)
 
         {
             this.dx = -this.dx;
         }
 
-        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+        if (this.y + this.radius > canvas4.height || this.y - this.radius < 0) {
             this.dy = -this.dy
         }
         this.x += this.dx;
@@ -70,7 +69,7 @@ function Circle(x, y, dx, dy, radius) {
             mouse.y - this.y < 50 && mouse.y - this.y > -50) {
 
 
-            if (this.radius < maxRadius) {
+            if (this.radius < maxRadius1) {
                 this.radius += 2.3;
             }
 
@@ -89,9 +88,9 @@ function Circle(x, y, dx, dy, radius) {
 
 var circleArray = [];
 
-function init() {
+function init1() {
     circleArray = [];
-    for (let i = 0; i < ballCount; i++)
+    for (let i = 0; i < ballCount1; i++)
     {
         let radius = Math.random() * 3 + 1;
         let x = Math.random() * (innerWidth - radius * 2) + radius;
@@ -99,7 +98,7 @@ function init() {
         let dx = (Math.random() - 0.5);
         let dy = (Math.random() - 0.5);
 
-        circleArray.push(new Circle(x, y, dx, dy, radius));
+        circleArray.push(new Circle1(x, y, dx, dy, radius));
 
 
     }
@@ -108,8 +107,8 @@ function init() {
 
 
 
-function animate() {
-    requestAnimationFrame(animate);
+function animate1() {
+    requestAnimationFrame(animate1);
     
 
     c.clearRect(0, 0, innerWidth, innerHeight); // izdzees katru kadru
@@ -121,5 +120,5 @@ function animate() {
 
 
 }
-init();
-animate();
+init1();
+animate1();

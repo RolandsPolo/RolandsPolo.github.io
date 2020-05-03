@@ -1,0 +1,421 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: floralwhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cool-slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background: linear-gradient(to left,#ba745b,#d1a984);
+    z-index: -1;
+}
+nav{
+    display: grid;
+    grid-template-columns: 60%;
+    min-height: 10vh;
+    color:white;
+    align-items: center;
+}
+#logo{
+    grid-column: 2;
+    font-size: 24px;
+}
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height: 60%;
+    width:100%;
+    position: relative;
+    z-index:1;
+}
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.headline{
+    position: absolute;
+    top:50%;
+    left:50%;
+    font-size: 70px;
+    transform: translate(-50%,-50%);
+    color:white;
+    z-index: 3;
+}
+.hero::after{
+content: "";
+background: black;
+width:100%;
+height:100%;
+position: absolute;
+top:0;
+opacity: 0.3;
+left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* First block */
+
+#famousPersons {
+    width: 1100px;
+    height: 2000px;
+}
+
+#famousPersons .block-steve {
+    position: relative;
+    background-color: #ffe8df;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    margin-top: 10%;
+    transform: translate(-50%);
+    color:floralwhite;
+    transition: 4s;
+} 
+#famousPersons .block-steve.change {
+    position: relative;
+    background-color: #ffe8df;
+    width: 80%;
+    height: 17%;
+    left: 50%;
+    margin-top: 10%;
+    color:black;
+    transform: translate(-50%);
+} 
+
+
+#famousPersons img {
+    width: 100%;
+    height: 100%;
+}
+
+#steveJobs #img {
+    float: left;
+    height: 100%;
+    width: 40%;
+}
+
+#famousPersons p {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+}
+
+#steveJobs #text {
+    float: right;
+    height: 100%;
+    width: 60%;
+}
+
+#billGates #text {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+#billGates #img {
+    float: right;
+    width: 40%;
+    height: 100%;
+}
+
+#markZuckerberg #text {
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+#markZuckerberg #img {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+h2 {
+    position: relative;
+    top: 3%;
+    text-align: center;
+    font-size: 35px;
+    opacity: 0;
+    font-style: italic;
+    transition: 3s;
+    z-index:2;
+}
+.test.show{
+    z-index:2;
+    opacity: 1;
+    color:black
+}
+.check{
+    position: relative;
+    top:100px !important;
+}
+.cool-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color:gray;
+    position: relative;
+    transform: translateY(50px);
+    transition: all 3s ease-out;
+    opacity:0;
+}
+.cool-text.main{
+    color:black;
+    opacity:1;
+    transform: translateY(50%)
+}
+
+
+.position-style {
+    position: relative;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#firstBlock {
+    z-index:3;
+    width: 1200px;
+    height: 600px;
+}
+
+#leftSide {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(158, 167, 250, 0.1);
+}
+
+
+#rightSide {
+    float: right;
+    width: 50%;
+    height: 100%;
+    animation-duration: 1s;
+    background: url(./Images/1.jpg);
+    animation: slide 40s infinite;
+}
+
+@keyframes slide {
+    25% {
+        background: url(./Images/code.jpg);
+    }
+    50% {
+        background: url(./Images/programmer.jpg);
+    }
+    75% {
+        background: url(./Images/keyboard.jpg);
+    }
+    100% {
+        background: url(./Images/1.jpg);
+    }
+}
+
+/* Second Block */
+
+.secondBlock {
+    top: -500px !important;
+    width: 0;
+    height: 0;
+    background-color: white;
+    transition: 5s;
+}
+.secondBlock.afterChange {
+    top: -500px !important;
+    width: 90%;
+    height: 800px;
+    background: linear-gradient(to left,#ba745b,#d1a984);
+}
+
+h1 {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black
+}
+
+#slider {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 300px;
+    height: 5px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #e74c3c;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: none;
+    transition: .3s ease-in-out;
+}
+
+#secondBlock #right {
+    float: right;
+    position: relative;
+    top: -412px;
+    width: 650px;
+    height: 100%;
+    background-color: yellow;
+}
+
+#saturs {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 530px;
+}
+
+#fractal {
+    float: left;
+    width: 600px;
+    height: 100%;
+}
+
+#fractal-1 {
+    float: right;
+    width: 600px;
+    height: 100%;
+}
+
+#yes {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 40px;
+}
+
+#range1 {
+    float: left;
+    width: 600px;
+    height: 100%;
+}
+
+#range2 {
+    float: right;
+    width: 600px;
+    height: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background: brown;
+    color: black;
+    font-size: 20px;
+    width: 300px;
+    overflow: hidden;
+}
+#scroll img{
+    position: relative;
+    left:50%;
+    transform: translate(-50%,0);
+    width:80px;
+    height:80px;
+}
+
+.thirdBlock {
+    top: -500px !important;
+    width: 0%;
+    height: 550px;
+    background: linear-gradient(to left,#ba745b,#d1a984);
+    transition: 3s;
+}
+.thirdBlock.afterThisChange{
+    width:100%;
+}
+
+
+.thirdBlock h1 {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black
+}
+
+.thirdBlock .canvas-block {
+    width: 1000px;
+    height: 450px;
+    position: relative;
+    top: 10%;
+}
+
+.fourthBlock {
+    background:linear-gradient(to left,#ba745b,#d1a984);
+    top: -500px !important;
+    width: 0%;
+    height: 500px;
+    transition: 5s;
+}
+.fourthBlock.afterAnimate{
+    width:100%;
+}
+
+#flyingBalls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(28, 3, 68);
+}
